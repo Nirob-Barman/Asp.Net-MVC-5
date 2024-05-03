@@ -1,0 +1,140 @@
+﻿@using RazorSyntax.Models;
+
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1>Home | Index</h1>
+    </div>
+    <div>
+        @helper MyListHelper(string[] str)
+        {
+            if (str.Length == 0)
+            {
+                <label>No data exist</label>
+            }
+            else
+            {
+                <ul>
+                    @foreach (var item in str)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+        }
+    </div>
+    <div>
+        <label>Helper Example Name - list</label>
+        <div>
+            @MyListHelper(new string[] { "Tom", "Harry", "John" })
+        </div>
+    </div>
+
+    <div>
+        <label>Helper Example - Programming Language</label>
+        <div>
+            @MyListHelper(new string[] { "C", "C++", "Python", "Java" })
+        </div>
+    </div>
+
+    <div>
+        <label>Helper Example Empty - list</label>
+        <div>
+            @MyListHelper(new string[] { })
+        </div>
+    </div>
+
+    <div>
+        @{
+            Employee emp = new Employee()
+            {
+                ID = 1,
+                Name = "Nirob"
+            };
+        }
+    </div>
+    <div>
+        @emp.ID - @emp.Name
+    </div>
+    <div>
+        <p>
+            nirob.barman.19@gmail.com
+        </p>
+        <p>@@nirob.barman</p>
+    </div>
+    <div>
+        @DateTime.Now
+    </div>
+    <div>
+        @(5-3)
+    </div>
+    <div>
+        @{
+            var a = 1;
+            var b = 2;
+            var c = a + b;
+            var currentTime = DateTime.Now;
+            var tomorrowTime = DateTime.Now.AddDays(1);
+            var colosList = new List<string>() { "Red", "Green", "Pink", "Blue" };
+        }
+    </div>
+
+    <div>
+        <label>@c</label>
+        <br />
+        <label>Current Time - @currentTime</label>
+        <br />
+        <label>Tomorrow Time - @tomorrowTime</label>
+        <br />
+        <label>Tomorrow Time - @colosList.FirstOrDefault()</label>
+    </div>
+
+    <div>
+        @{
+            bool isTrue = false;
+            int myVar = 3;
+        }
+    </div>
+    <div>
+        @{
+            if (isTrue)
+            {
+                <h1>If block</h1>
+            }
+            else
+            {
+                <h1>Else block</h1>
+            }
+        }
+    </div>
+    <div>
+        @(myVar==3?"True" : "False")
+    </div>
+    <div>
+        @for (int i = 1; i <= 5; i++)
+        {
+            <div>
+                @(i*2)
+            </div>
+        }
+    </div>
+    <hr />
+    <div>
+        @{
+            var myList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+            <text>
+                var myList1 = new List<int>
+                    () { 1, 2, 3, 4, 5, 6, 7, 8 }
+            </text>
+        }
+        @foreach (var obj in myList)
+        {
+            <div>@obj</div>
+        }
+</div>
+
+</body>
+</html>
