@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <h1>Home | About</h1>
+    </div>
+    <div>
+        @if (!string.IsNullOrEmpty(ViewBag.Name))
+        {
+            <p>Welcome, @ViewBag.Name!</p>
+        }
+        else
+        {
+            <p>Welcome!</p>
+        }
+    </div>
+</body>
+</html>

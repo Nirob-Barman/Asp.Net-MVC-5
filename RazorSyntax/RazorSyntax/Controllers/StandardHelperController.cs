@@ -6,18 +6,16 @@ using System.Web.Mvc;
 
 namespace RazorSyntax.Controllers
 {
-    public class HomeController : Controller
+    public class StandardHelperController : Controller
     {
-        // GET: Home
+        // GET: StandardHelper
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult About(string name = null)
+
+        public ActionResult About()
         {
-            ViewBag.Name = name;
-            //var abc = "Name Parameter in About View: " + name;
-            Console.WriteLine("Name Parameter in About View: " + name);
             return View();
         }
     }

@@ -9,6 +9,16 @@
         <h1>Home | Index</h1>
     </div>
     <div>
+        @Html.ActionLink("home | Index", "Index")
+    </div>
+    <div>
+        @*@Html.ActionLink("home | About", "About", new { name = "Nirob", null })*@
+        @Html.ActionLink("home | About", "About", new { name = "Nirob" })
+    </div>
+    <div>
+        @Html.ActionLink("Standard Helper Controller Index Page", "Index", "StandardHelper")
+    </div>
+    <div>
         @helper MyListHelper(string[] str)
         {
             if (str.Length == 0)

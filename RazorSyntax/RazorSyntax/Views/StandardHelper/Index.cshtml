@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Standard Helper | Index</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Standard HTML Helper | Index
+        </h1>
+    </div>
+    <div>
+        @Html.ActionLink("Home | Index", "Index", "Home")
+    </div>
+    <div>
+        @Html.ActionLink("Standard Helper | About", "About")
+    </div>
+    <div>
+        @{ 
+            string name = "PlaceHolder Value";
+        }
+    </div>
+    <div>
+        @*@Html.TextBox("TextBox1", "PlaceHolder Value")*@
+        @*@Html.TextBox("TextBox1", name, new { id = "customId" })*@
+        @Html.TextBox("TextBox1", null, new { id = "customId", @class = "MyCustomeClass", style="width:400px" })
+    </div>
+    <div>
+        @*@Html.CheckBox("chkbox")*@
+        @*@Html.CheckBox("chkbox", true)*@
+        @Html.CheckBox("chkbox", true, new { id = "firstCheck" })
+    </div>
+    <div>
+        @Html.Password("MyPassword", "pass", new {@class="passClass"})
+    </div>
+    <div></div>
+</body>
+</html>
