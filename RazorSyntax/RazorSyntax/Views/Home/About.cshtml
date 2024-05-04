@@ -14,6 +14,11 @@
     <div>
         <h1>Home | About</h1>
     </div>
+
+    <div>
+        @ViewData["MyKey"]
+    </div>
+
     <div>
         @if (!string.IsNullOrEmpty(ViewBag.Name))
         {
@@ -24,5 +29,34 @@
             <p>Welcome!</p>
         }
     </div>
+    <div>
+        <h1>View Bag</h1>
+        <ul>
+            @foreach (var list in ViewBag.myList)
+            {
+                <li>@list</li>
+            }
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            @foreach (var list in ViewBag.employeeList)
+            {
+                <li>@list.Name - @list.Email - @list.Id</li>
+            }
+        </ul>
+    </div>
+
+    <div>
+        <h1>View Data</h1>
+        <ul>
+            @foreach (var list in (List<string>) ViewData["myList"])
+            {
+                <li>@list</li>
+            }
+        </ul>
+    </div>
+
 </body>
 </html>

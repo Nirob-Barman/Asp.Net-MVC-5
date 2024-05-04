@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\TemplateEmployee.cs" />
+    <Compile Include="Models\ViewBagEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
