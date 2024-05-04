@@ -96,6 +96,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StandardHelperController.cs" />
     <Compile Include="Controllers\StronglyHelperController.cs" />
+    <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\TemplatedHelperController.cs" />
     <Compile Include="CustomHelper.cs" />
     <Compile Include="Global.asax.cs">
@@ -117,6 +118,9 @@
     <Content Include="Views\StronglyHelper\About.cshtml" />
     <Content Include="Views\TemplatedHelper\Index.cshtml" />
     <Content Include="Views\TemplatedHelper\Edit.cshtml" />
+    <Content Include="Views\TempData\Index.cshtml" />
+    <Content Include="Views\TempData\Index2.cshtml" />
+    <Content Include="Views\TempData\Index3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
