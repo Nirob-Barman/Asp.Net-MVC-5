@@ -24,5 +24,43 @@
             <p>Welcome!</p>
         }
     </div>
+
+    <div>
+        <!-- @Html.ActionLink() - Used to create link on html page -->
+        @Html.ActionLink("Click me", "ActionName", "ControllerName")
+
+        <!-- @Html.TextBox() - Used to create text box -->
+        @Html.TextBox("TextBoxName")
+
+        <!-- @Html.CheckBox() - Used to create check box -->
+        @Html.CheckBox("CheckBoxName")
+
+        <!-- @Html.RadioButton() - Used to create Radio Button -->
+        @Html.RadioButton("RadioButtonName", "Value")
+
+        <!-- @Html.BeginForm() - Used to start a form -->
+        @using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+
+            <!-- @Html.EndForm() - Used to end a form -->
+        @Html.EndForm()
+
+        <!-- @Html.DropDownList() - Used to create drop down list -->
+        @Html.DropDownList("DropDownName", new SelectList(Model.ListItems, "Value", "Text"))
+
+        <!-- @Html.Hidden() - Used to create hidden fields -->
+        @Html.Hidden("HiddenFieldName", "HiddenFieldValue")
+
+        <!-- @Html.Label() - Used for creating HTML label is on the browser -->
+        @Html.Label("LabelForTextBox")
+
+        <!-- @Html.TextArea() - The TextArea Method renders textarea element on browser -->
+        @Html.TextArea("TextAreaName")
+
+        <!-- @Html.Password() - This method is responsible for creating password input field on browser -->
+        @Html.Password("PasswordName")
+
+        <!-- @Html.ListBox() - The ListBox helper method creates html ListBox with scrollbar on browser -->
+        @Html.ListBox("ListBoxName", new SelectList(Model.ListItems, "Value", "Text"))
+    </div>
 </body>
 </html>
