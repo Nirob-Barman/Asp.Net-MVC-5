@@ -1,0 +1,46 @@
+﻿@using RazorSyntax.Models;
+
+@model Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Strongly HTML Helper | Index</h1>
+        <p>
+            @Html.ActionLink("About", "About")
+        </p>
+    </div>
+    <div>
+        @using (Html.BeginForm("myForm"))
+        {
+            @Html.TextBoxFor(x => x.ID) <br /><br />
+            @Html.TextBoxFor(x => x.Name) <br /><br />
+            @Html.TextBoxFor(x => x.Address) <br /><br />
+            @Html.CheckBoxFor(x => x.isEmplyoee) <br /><br />
+            <input type="submit" value="Submit the Form data"/>
+        }
+    </div>
+    <div>
+        <hr />
+        <hr />
+    </div>
+    @*<div>
+        @Html.TextBoxFor(x => x.ID) <br /><br />
+        @Html.TextBoxFor(x => x.Name) <br /><br />
+        @Html.TextBoxFor(x => x.Address) <br /><br />
+        @Html.CheckBoxFor(x => x.isEmplyoee) <br /><br />
+    </div>*@
+    <div>
+    </div>
+</body>
+</html>

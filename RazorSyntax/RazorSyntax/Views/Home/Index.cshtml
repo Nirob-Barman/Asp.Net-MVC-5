@@ -9,14 +9,14 @@
         <h1>Home | Index</h1>
     </div>
     <div>
-        @Html.ActionLink("home | Index", "Index")
+        
+        
     </div>
     <div>
-        @*@Html.ActionLink("home | About", "About", new { name = "Nirob", null })*@
-        @Html.ActionLink("home | About", "About", new { name = "Nirob" })
-    </div>
-    <div>
-        @Html.ActionLink("Standard Helper Controller Index Page", "Index", "StandardHelper")
+        <p>@*@Html.ActionLink("home | About", "About", new { name = "Nirob", null })*@</p>
+        <p>@Html.ActionLink("home | About", "About", new { name = "Nirob" })</p>
+        <p>@Html.ActionLink("Standard Helper | Index", "Index", "StandardHelper")</p>
+        <p>@Html.ActionLink("Strongly Helper | Index", "Index", "StronglyHelper")</p>
     </div>
     <div>
         @helper MyListHelper(string[] str)
