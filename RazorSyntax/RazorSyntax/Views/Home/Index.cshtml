@@ -1,5 +1,6 @@
 ﻿@using RazorSyntax.Models;
 
+
 <html>
 <head>
 
@@ -8,10 +9,7 @@
     <div>
         <h1>Home | Index</h1>
     </div>
-    <div>
-        
-        
-    </div>
+
     <div>
         <p>@*@Html.ActionLink("home | About", "About", new { name = "Nirob", null })*@</p>
         <p>@Html.ActionLink("home | About", "About", new { name = "Nirob" })</p>
@@ -19,6 +17,20 @@
         <p>@Html.ActionLink("Strongly Helper | Index", "Index", "StronglyHelper")</p>
         <p>@Html.ActionLink("TemplatedHelper | Index", "Index", "TemplatedHelper")</p>
     </div>
+
+    <div>
+        <div><h1>Custom Helper</h1></div>
+        <div>
+            @CustomHelper.Image("https://img.freepik.com/premium-psd/earth-globe-map-geography-icon-3d-render-illustration_47987-7656.jpg", "Earth", 100, 100)
+        </div>
+        <div>
+            @Html.Img("https://img.freepik.com/premium-psd/earth-globe-map-geography-icon-3d-render-illustration_47987-7656.jpg", "Earth", 100, 100)
+        </div>
+        <div>
+            @Html.ImgTag("https://img.freepik.com/premium-psd/earth-globe-map-geography-icon-3d-render-illustration_47987-7656.jpg", "Earth", 100, 100)
+        </div>
+    </div>
+
     <div>
         @helper MyListHelper(string[] str)
         {

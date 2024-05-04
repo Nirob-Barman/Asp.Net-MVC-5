@@ -30,7 +30,6 @@ namespace RazorSyntax.Controllers
         [HttpPost]
         public ActionResult Edit(TemplateEmployee emp)
         {
-
             return View();
         }
     }
