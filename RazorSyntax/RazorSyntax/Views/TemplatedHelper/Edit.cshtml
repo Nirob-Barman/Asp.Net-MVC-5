@@ -1,0 +1,43 @@
+﻿@model RazorSyntax.Models.TemplateEmployee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>
+                Edit
+            </h1>
+        </div>
+        <div>
+            <p> @Html.DisplayName("ID") - @Html.Editor("ID")</p>
+            <p>@Html.DisplayNameFor(x => x.Name) - @Html.EditorFor(x=>x.Name)</p>
+        </div>
+        <hr />
+        <div>
+            <p>@Html.DisplayNameFor(x => x.DateOfBirth) - @Html.EditorFor(x => x.DateOfBirth)</p>
+            <p>@Html.DisplayNameFor(x => x.BirthTime) - @Html.EditorFor(x => x.BirthTime)</p>
+        </div>
+        <hr />
+        <div>
+            @*@Html.EditorForModel()*@
+
+            @using (Html.BeginForm("myForm"))
+            {
+                @Html.EditorForModel()
+
+                <input type="submit" value="Submission" />
+            }
+        </div>
+    </div>
+</body>
+</html>

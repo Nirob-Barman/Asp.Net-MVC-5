@@ -96,10 +96,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StandardHelperController.cs" />
     <Compile Include="Controllers\StronglyHelperController.cs" />
+    <Compile Include="Controllers\TemplatedHelperController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\TemplateEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +113,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\StronglyHelper\Index.cshtml" />
     <Content Include="Views\StronglyHelper\About.cshtml" />
+    <Content Include="Views\TemplatedHelper\Index.cshtml" />
+    <Content Include="Views\TemplatedHelper\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,56 @@
+﻿@using RazorSyntax.Models
+@model TemplateEmployee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Template Helper | Index</title>
+</head>
+<body>
+    <div> 
+        <div>
+            <h1>Template Helper | Index</h1>
+            @Html.ActionLink("Edit", "Edit")
+        </div>
+        <div>
+            <p>@Html.DisplayName("Name")</p>
+
+            <p>@Html.DisplayNameFor(x => x.DateOfBirth)</p>
+
+            <hr />
+
+            <p>@Html.DisplayText("Name")</p>
+            <p>@Html.DisplayTextFor(x=>x.DateOfBirth)</p>
+            <hr />
+            <p>@Html.Display("Name")</p>
+            <p>@Html.DisplayFor(x=>x.Email)</p>
+
+            <hr />
+
+            <p>@Html.DisplayForModel()</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .display-label {
+        width: 300px;
+        padding: 5px;
+        background-color: gray;
+        border-radius: 5px;
+    }
+    .display-field {
+        width: 300px;
+        padding: 5px;
+        background-color: yellow;
+        border-radius: 5px;
+        margin-left: 20px !important;
+        margin: 10px;
+    }
+</style>
